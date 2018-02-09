@@ -1,0 +1,102 @@
+
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+/*
+Call out boxes for video pages
+
+*/
+
+div.veryTran {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+div.medTran {
+    background: rgba(0, 0, 0,  0.5);
+}
+
+div.lightTran {
+    background: rgba(0, 0, 0,  0.75);
+
+}
+
+.myHover:hover {
+
+  outline-style: solid; 
+  outline-color: white; 
+  outline-width: 1px;
+}
+
+  .order_box {
+    position:absolute;
+    top: 150px;
+    left: 125px;
+    }
+
+    .contact_box {
+    position:absolute;
+    top: 150px;
+    right: 125px;
+    }
+
+/*
+styling anchors for both contact box and order box
+as I mighthave other boxes might want to make a master class
+for the below behavior and just use sub boxes for the positions
+
+*/
+.order_box a, .contact_box a {color: white;}
+.order_box a:visited, .contact_box a:visited  {color:white;}  /* visited link */
+.order_box a:hover, .contact_box a:hover {color:white;text-decoration: none;}  /* mouse over link */
+.order_box a:active, .contact_box a:active {color: white; text-decoration: none;}  /* selected link */
+
+/*
+
+Sll side nave below
+
+*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 0px 0px 35px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #313131;
+}
+
+
+
+.selectedNav {
+
+    color: #FF3131;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
