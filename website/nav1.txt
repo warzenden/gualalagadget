@@ -1,0 +1,8 @@
+  <a href="orders.html" id="orderLink">ORDERS</a>
+  <a href="video.html" id="videoLink">VIDEO</a>
+  <a href="about.html" id="aboutLink">ABOUT</a>
+  <a href="blog.html" id="blogLink">BLOG</a>
+  <a href="faq.html" id="faqLink">FAQ</a>
+  <a href="endo.html" id="closeupLink">CLOSE UP</a>
+ 
+  

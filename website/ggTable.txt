@@ -1,0 +1,352 @@
+       
+<style type="text/css">
+	
+.wrapper {
+   position: relative;
+}
+
+.bottomright {
+   position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+}
+
+
+.zoom {
+    transition: transform .2s;
+
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+
+</style>
+<script type="text/javascript">
+	function fixImage(arg) {
+		var ggImg = document.getElementById(arg);
+		//alert(ggImg.id);
+		ggImg.style.display = 'none';
+		
+	}
+
+		function bringImage(arg) {
+		var ggImg = document.getElementById(arg);
+		//alert(ggImg.id);
+		ggImg.style.display = 'block';
+		
+	}
+</script>
+
+       <div class="panel panel-info">
+      	<!--<div class="panel-heading" align="center">Our Gadgets</div> -->
+        	<table>
+					<tr>
+						<td>
+							<div class="wrapper">
+								<img id="small_gear" 
+								onmouseover="fixImage('small_gearGlass')" 
+								onmouseout="bringImage('small_gearGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/small_gear.JPG" height="200" width="200">
+									<div class="bottomright" id="small_gearGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+
+
+						
+						<td>
+							<div class="wrapper">
+								<img id="coaxial" 
+								onmouseover="fixImage('coaxialGlass')" 
+								onmouseout="bringImage('coaxialGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/coaxial.JPG" height="200" width="200">
+									<div class="bottomright" id="coaxialGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+
+						<td>
+							<div class="wrapper">
+								<img id="coaxial" 
+								onmouseover="fixImage('archimedesGlass')" 
+								onmouseout="bringImage('archimedesGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/archimedes.JPG" height="200" width="200">
+									<div class="bottomright" id="archimedesGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+
+						<!-- <td>
+						<img id="big_gear" onClick="onSpecClick(this)" class="img-responsive hover-shadow" src="/assets/img/big_gear_sm.png">
+						</td>
+						<td>
+						<img id="comb" onClick="onSpecClick(this)" class="img-responsive hover-shadow" src="/assets/img/comb_sm.png">
+						</td>
+						<td>
+						<img id="magnetic" onClick="onSpecClick(this)" class="img-responsive hover-shadow" src="/assets/img/magnetic_sm.png">
+						</td> -->
+						
+						<td>
+							<div class="wrapper">
+								<img id="sisyphus" 
+								onmouseover="fixImage('sisyphusGlass')" 
+								onmouseout="bringImage('sisyphusGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/sisyphus.JPG" height="200" width="200">
+									<div class="bottomright" id="sisyphusGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+
+						<td>
+							<div class="wrapper">
+								<img id="piston" 
+								onmouseover="fixImage('pistonGlass')" 
+								onmouseout="bringImage('pistonGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/piston.JPG" height="200" width="200">
+									<div class="bottomright" id="pistonGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+						<td>
+							<div class="wrapper">
+								<img id="manual" 
+								onmouseover="fixImage('manualGlass')" 
+								onmouseout="bringImage('manualGlass')" 
+								onClick="onSpecClick(this)" class="img-responsive hover-shadow zoom" 
+								src="/assets/img/manual.jpg" height="200" width="200">
+									<div class="bottomright" id="manualGlass">
+									<span  class="glyphicon glyphicon-zoom-in"></span>
+									</div>
+							
+							</div>
+						</td>
+
+					</tr>
+
+				</table>
+		 </div> 
+
+
+<!-- Modal -->
+<div class="container">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="ggNameTitle">Gadget Specifications</h4>
+        </div>
+        <div class="modal-body">
+        		 <div class="container-fluid">
+        		 	 <div class="row">
+     				 <div class="col-md-7">
+     				 	<img class="img-responsive" width="100%" id="ggSpecImg" src=""></img>
+     				 </div>
+					 <div class="col-md-5">
+							<div id="ggSpecText"></div>
+					</div>
+    				</div>      		
+       		</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<script>	
+
+	var ggName = "None";
+	var altText = "None";
+	var ggFootprint = "0 X 0 mm";
+	var ggHeight = "0 mm";
+	var ggTracks = "0";
+	var ggBearings = "0";
+	var ggBandW = "0 ball/min";
+	var ggLatency = "0 sec";
+	var ggSolar = "N//A";
+	var ggDesc = "";
+
+	
+	function onSpecClick(element) {
+		$("#myModal").modal("show");
+		  document.getElementById("ggSpecImg").src = element.src;
+		  document.getElementById("myModal").style.display = "block";
+		  document.getElementById("ggSpecText").innerHTML = setPageValues(element.id);
+		  document.getElementById("ggNameTitle").innerHTML = ggName;
+	
+	}	
+	
+function setPageValues(id) { 
+	
+
+	
+	switch(id) {	
+	case "coaxial":
+		//coaxial_sm
+		ggName = "Coaxial";
+		altText = "Coaxial";
+	    ggFootprint = "70 X 70 mm";		ggHeight = "96 mm";		ggTracks = "2";
+	    ggBearings = "10";				ggBandW = "37 ball/min";
+	    ggLatency = "12 sec";				ggSolar = "Yes";
+	    ggDesc = "A radial lifting mechanism raises balls in a clockwise direction through twenty five stages around a central axis. The descending path continues in a clockwise direction, coaxially positioned around the lifting piston.";
+
+
+		break;
+		
+	case "archimedes":
+		//coaxial_sm
+		ggName = "Archimedes"; altText = "Archimedes";
+		ggFootprint = "102 X 102 mm";		ggHeight = "136 mm";		ggTracks = "2";
+	    ggBearings = "26";				ggBandW = "32 ball/min";
+	    ggLatency = "50 sec";				ggSolar = "Yes";
+	    ggDesc = "Archimedes inspires this model. A central screw collects the balls in one of two chambered columns and slowly lifts them to the very top of the maze, where they are released to begin their descent along the two tangled paths.";
+		break;
+		
+	case "big_gear":
+			//big_gear_sm
+			ggName = "Big Gear"
+			altText = "Big Gear";
+			imgURL = "/assets/img/big_gear_sm.png";
+	
+	        ggFootprint = "120 X 126 mm";		ggHeight = "132 mm";		ggTracks = "3";
+	        ggBearings = "30";				ggBandW = "120 ball/min";
+	        ggLatency = "16 sec";				ggSolar = "Yes";
+
+	        ggDesc = "An eighteen chambered gear collects balls and lifts them to the top of the maze where, depending on the shape of the chamber, the ball is deposited onto one of three tracks. The balls descend the interwoven tracks back to the gear’s loading zone at the bottom of the model, where they wait to repeat the circuit. The large gear model is especially frenetic, with about twenty balls busily negotiating the maze at any time.";
+	
+			break;	
+			
+	case "comb":
+		//coaxial_sm
+		ggName = "Comb"; altText = "Comb";
+	    ggFootprint = "65 X 70 mm";		ggHeight = "95 mm";		ggTracks = "1";
+	    ggBearings = "17";				ggBandW = "17 ball/min";
+	    ggLatency = "29 sec";				ggSolar = "Yes";
+	    ggDesc = "This unusual model has a comb shaped lifting arm which travels in a circular motion, collecting balls individually and passing them, one by one, to the next stage of the lift. After six of these “handoffs” each ball is released to travel the single path back to the bottom. Only one or two balls will be descending at a time, making this one of the more peaceful gadgets.";
+
+		break; 
+
+	case "magnetic":
+		//coaxial_sm
+		ggName = "Magnetic"; altText = "Magnetic";
+	    ggFootprint = "53 X 103 mm";		ggHeight = "92 mm";		ggTracks = "1";
+	    ggBearings = "1";				ggBandW = "1.2 ball/min";
+	    ggLatency = "50 sec";				ggSolar = "Yes";
+
+	    ggDesc = "Hidden magnets in the lifting cylinder capture the ferromagnetic ball and lift it to the top of the model by forcing it to travel along the rising spiral path. At the top the ball is released and travels back down the descending spiral path. This model only works with a single ball, and is especially quiet.";
+			
+		break;
+		
+	case "sisyphus":
+		//coaxial_sm
+		ggName = "Sisyphus"; altText = "Sisyphus";
+		ggFootprint = "53 X 53 mm";		ggHeight = "92 mm";		ggTracks = "1";
+	   	ggBearings = "1";				
+	  	ggBandW = "1.2 ball/min";
+	  	ggLatency = "50 sec";			ggSolar = "Yes";
+
+	  	ggDesc = "A single ball slowly climbs the spiral, and once the climb has been accomplished it’s released and quickly travels all the way back down, only to repeat the cycle endlessly. This model is solar powered, and in the spirit of the myth should only torture a single ball.";	
+		
+		break;
+		
+	case "piston":
+		//coaxial_sm
+		ggName = "Piston"; altText = "Piston";
+	    ggFootprint = "55 X 102 mm";		ggHeight = "125 mm";		ggTracks = "1";
+	    ggBearings = "14";				ggBandW = "46";
+	    ggLatency = "17";				ggSolar = "Yes";
+		
+		ggDesc = "A ten chambered piston is employed by this model to lift the balls. Each chamber passes the ball to the next chamber by way of a curved track. Once at the top of the piston each ball is released to travel a single spiral path back to the bottom of the model. The synchronous action of the piston evokes an engine busily operating under a heavy load.";
+
+		break;
+		
+	case "small_gear":
+		//coaxial_sm
+		ggName = "Small Gear"; altText = "Small Gear";
+		imgURL = "/assets/img/small_gear_sm.png";		
+	    ggFootprint = "90 X 92 mm";		ggHeight = "96 mm";		ggTracks = "2";
+	    ggBearings = "10";				ggBandW = "37 ball/min";
+	    ggLatency = "12 sec";				ggSolar = "Yes";
+
+	    ggDesc = "A six chambered gear collects balls and lifts them to the top of the maze where, depending on the shape of the chamber, each ball is deposited onto one of two tracks. The balls descend the interwoven tracks back to the gear’s loading zone at the bottom of the model, where they wait to repeat the circuit.";
+
+		break;
+
+	case "manual":
+		//coaxial_sm
+		ggName = "Manual"; altText = "Manual";
+		imgURL = "/assets/img/small_gear_sm.png";		
+	    ggFootprint = "70 X 50 mm";		ggHeight = "90 mm";		ggTracks = "1";
+	    ggBearings = "Varies";				ggBandW = "Varies";
+	    ggLatency = "Varies";				ggSolar = "N/A";
+
+	    ggDesc = "A hand-powered central screw lifts a ball to the very top of the maze, where it is released to begin its descent.";
+
+		break;
+		
+	default:	
+		ggName = "No ID found";	
+		altText = "No ID found";
+		ggDesc = "";
+	}
+  
+  	
+	var spectext = "Name: " + ggName + "<br>FootPrint: " + ggFootprint + "<br> Height: " + ggHeight + "<br>"; 
+	spectext = spectext + "No. of Tracks: " + ggTracks + "<br> No. of Balls: " + ggBearings + "<br>";  
+	//spectext = spectext + "Bandwidth: " + ggBandW + " Latency: " + ggLatency + "<br>"; 
+	spectext = spectext + "Solar: " + ggSolar; 
+
+	if(id == "small_gear") {
+	spectext = spectext + '<br><br><a class=\"btn btn-info\" href=\"detail.html?gId=' + id + '\"> 3D model of   ' + ggName + ' <span class=\"glyphicon glyphicon-eye-open\"></span></a>';
+
+	}
+	//glyphicon-shopping-cart
+
+	if(id != "manual") {
+
+	spectext = spectext + '<br><br><a class=\"btn btn-primary\" onclick=\"alert(\'Orders comming soon.\');' + '\"> Order ' + ggName + ' <span class=\"glyphicon glyphicon-shopping-cart\"></span></a>';
+	} else {
+
+		spectext = spectext + '<br><br><a href=\"/3d/kmanual.stl\" class=\"btn btn-info\"' + '\"> Download STL' + '</a>';
+
+
+	}
+
+	spectext = spectext + "<br><br>" + ggDesc;
+
+	return spectext;  
+	
+
+}  
+
+	
+		
+</script>	
+
+				
+				

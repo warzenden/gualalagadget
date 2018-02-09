@@ -1,0 +1,366 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"al",
+				"align-self"
+			],
+			[
+				"ge",
+				"getItem"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"q",
+				"quantity"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"0xff",
+				"0xffffff"
+			],
+			[
+				"h",
+				"hover"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"l",
+				"loop\tAttr"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"algn",
+				"align-content"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
+				"in",
+				"info"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"a",
+				"add"
+			],
+			[
+				"H",
+				"HEADER\tTag"
+			],
+			[
+				"p",
+				"position"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 119.0,
+		"last_filter": "intsall",
+		"selected_items":
+		[
+			[
+				"intsall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/chris/WebProjects/gualalagadget/testNave.html",
+		"/Users/chris/WebProjects/gualalagadget/assets/js/ggNav.js",
+		"/Users/chris/WebProjects/gualalagadget/orders.html",
+		"/Users/chris/WebProjects/gualalagadget/assets/css/gualalagadget.css",
+		"/Users/chris/WebProjects/gualalagadget/faq.html",
+		"/Users/chris/WebProjects/gualalagadget/video.html",
+		"/Users/chris/WebProjects/gualalagadget/catalog.html",
+		"/Users/chris/WebProjects/gualalagadget/index.html",
+		"/Users/chris/WebProjects/gualalagadget/ggTable.txt",
+		"/Users/chris/WebProjects/gualalagadget/detail.html",
+		"/Users/chris/WebProjects/gualalagadget/blog.html",
+		"/Users/chris/WebProjects/gualalagadget/video2.html",
+		"/Users/chris/WebProjects/gualalagadget/test.html",
+		"/Users/chris/WebProjects/gualalagadget/splash.html",
+		"/Users/chris/WebProjects/gualalagadget/assets/js/ggCart.js",
+		"/Users/chris/WebProjects/gualalagadget/gadgets.html",
+		"/Users/chris/WebProjects/gualalagadget/nav1.txt",
+		"/Users/chris/WebProjects/gualalagadget/power.html",
+		"/Users/chris/WebProjects/gualalagadget/care.html",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/archimedes.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/comb.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/big_gear.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/coaxial.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/magnetic.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/piston.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/sisyphus.stl",
+		"/Users/chris/Documents/gualaGadgetsContent/correctedModels/small_gear.stl",
+		"/Users/chris/WebProjects/gualalagadget/3d/index.html",
+		"/Users/chris/WebProjects/gualalagadget/3dTest/index.html",
+		"/Users/chris/WebProjects/gualalagadget/3dTest/cube.html",
+		"/Users/chris/WebProjects/gualalagadget/3dTest/fileTest.html",
+		"/Users/chris/Downloads/three.js-master/build/three.min.js",
+		"/Users/chris/WebProjects/gualalagadget/WebContent/nav1.txt",
+		"/Users/chris/WebProjects/gualalagadget/WebContent/sftp-config.json",
+		"/Users/chris/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/ggserver",
+		"/Users/chris/WebProjects/gualalagadget/WebContent/index.html"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"toggle",
+			"oncl",
+			"openN",
+			"openNav",
+			"gadget",
+			"ggTable",
+			"nav",
+			"set",
+			"ggDesc",
+			"ggRowDisplay",
+			"font-s",
+			"backg",
+			"&",
+			"combina",
+			"ggNameTitle",
+			"modal-title",
+			"modal",
+			"setPageValues",
+			"ggName",
+			"0x",
+			"info",
+			"bg-info",
+			"img",
+			"white",
+			"gotham",
+			"Gotham",
+			"font",
+			"tit",
+			"style=",
+			"gadgets",
+			"Guala",
+			"gadgets",
+			"blog",
+			"power",
+			"peopleCarouselImg",
+			"setPageValues",
+			"stats",
+			"manual",
+			"onSpecClick",
+			"modelName",
+			"controls",
+			"careNav",
+			"jpg",
+			"archimedes",
+			"arch",
+			"alert",
+			"modelName",
+			"anim",
+			"alert",
+			"addShadowedLight",
+			"animate",
+			"anim",
+			"cameraTarget",
+			"controls",
+			"update",
+			"stat",
+			"parseURL",
+			"setPageValues",
+			"animate",
+			"cameraTarget",
+			"light",
+			"parseStl",
+			"trim",
+			"cameraTarget",
+			".stl",
+			"camera",
+			"trim"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 188.0
+	},
+	"pinned_build_system": "",
+	"project": "gg.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

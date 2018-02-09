@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>Gualala Gadget Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/jumbotron.css" rel="stylesheet">
+     <link href="assets/css/gualalagadget.css" rel="stylesheet">
+     <link href="assets/css/navIcon.css" rel="stylesheet">
+  </head>
+
+  <body>
+<div id="nav-icon3">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<br>
+
+<div id="mySidenav" class="sidenav">
+
+
+
+</div>
+<br>
+<div class="row">
+  <div class="col-md-1" align="right" >
+  </div>
+  <div class="col-md-10" id="ggTable">
+          <!--  this container intentionally left blank  -->  
+  </div>
+  <div class="col-md-1" align="left" >
+             
+  </div>
+</div>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        
+        <h1 class="display-3">Gualala Gadget Blog</h1>
+        <div class="panel-body">
+         <p>
+   The lifting mechanisms are all over the map.  In fact, that's the artists' greatest interest.  
+   Generally they carefully leverage gravity, as it's the most forgiving means of managing the 
+   balls' locations.  For example, the lifting gears rely on gravity for the balls to fall into 
+   the gears lifting chambers, and then again rely on gravity to direct the balls out to different
+   paths through the chambers shaped holes.  If, for example, a track simply met a shaped hole 
+   directly without a larger "boarding" chamber, there is a likelyhood that the ball would jam.
+   Having boarding chambers allows for the balls to jostle around and sort out which one will 
+   enter the chamber next.  
+</p>
+<p>
+   The paths back down are also designed in a number of ways, but the most intricate of the mazes
+   use a standard 1cm on a side tile, where the slope of the path is about four degrees from the 
+   horizontal, and the descent between tiles is 0.7mm.  The walls of the tiles are as shallow 
+   as possible so as not to hide the balls.  This tile based approach makes it possible to 
+   quickly create complex mazes (although solving for a dense arrangement is quite challenging),
+   but it still requires adding supporting structures for the 3D printing process.  These 
+   support structures are the most time consuming part of each model's design.  The simplest 
+   description of the challenge is that you can't have any angles between perfectly horizontal 
+   about about 25 degrees from horizontal -- FDM printers simply can't do this without 
+   removable support material.  It would be possible to use support material, but that would 
+   increase the print and clean-up efforts, and would actually detract from the look of the 
+   final model.  In fact, the artists' finds that the challenge of designing to avoid support 
+   material greatly enhances the final gadget's appearance.  In effect, the supporting 
+   structures become part of the model itself.
+</p>
+<p>
+   Before printing a gadget its model must be sliced.  Cura is used for this purpose.
+   The tile based approach of designing each model makes it nearly unavoidable to have 
+   overlapping solids, and some slicers do not handle these instances well, but Cura has proven 
+   quite capable of handling them.  Most parts are printed at 0.2mm layer height and between 
+   190 and 200 degrees Celsius.  Some parts require greater tolerances and are printed at a 
+   finer layer height.  The maze parts need to be printed at the lower end of the temperature 
+   range because they rely on extensive bridging, where the plastic is deposited in mid' air 
+   between supporting structures -- it must harden quickly to minimize how much it sags.
+</p>
+<p>
+   The parts come off the printers needing little or no post processing.  At least that's the 
+   case when they're well tuned.  It takes some time to get everything adjusted to that level, 
+   incuding the ambient temperature in the printing room, and until then it's necessary to 
+   perform some cleaning of plastic.  Usually this cleaning is just removing small strings of
+   PLA that didn't properly retract when the printer head was moving and not extruding.  This 
+   can be a bit challenging on the most complicated models because it's hard to get deep into
+   them.
+</p>
+<p>
+   All the models are very challenging to print. 
+
+   The final assembly of the gadgets involves soldering the electric parts together and 
+   attaching them to their mounts, attaching all the PLA parts together, usually with screws
+   and sometimes glue, then operating them for a while to make sure they are working well.
+   It's not uncommon to find balls getting stuck.  That's typically because there's still a 
+   stray piece of plastic that needs to be cleared.  Another cleaning may be needed.
+</p>
+        </div>
+
+      </div>
+    </div>
+
+  
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/js/vendor/popper.min.js"></script>
+    <!--  custom scripts below -->
+	<script src="assets/js/ggTable.js"></script>
+	<script src="assets/js/ggNav.js"></script>
+ <!--   <script>
+    $(document).ready(buildNavBar("#blogNav") 
+    		);
+    </script> -->
+  <script>
+    buildNavBar("#homeNav")
+  </script>
+    
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>

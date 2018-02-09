@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+    <title>Gualala Gadget FAQ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="bootstrap/css/jumbotron.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+   
+    <link href="assets/css/gualalagadget.css" rel="stylesheet">
+    <link href="assets/css/navIcon.css" rel="stylesheet">
+
+     <style type="text/css">
+       
+.glyphicon.glyphicon-collapse-down {
+    font-size: 1em;
+}
+.faq {
+    font-size: 1em;
+
+}
+
+
+     </style>
+  </head>
+
+<body>
+<div id="nav-icon3">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<br>
+<div id="mySidenav" class="sidenav">
+
+</div>
+<!-- <br>
+<div class="row">
+  <div class="col-md-1" align="right" >
+  </div>
+  <div class="col-md-10" id="ggTable">
+           this container intentionally left blank   
+ </div>
+  <div class="col-md-1" align="left" > 
+            
+  </div>
+</div>
+-->
+      <div class="container">
+        
+        <h2 class="display-3">Gualala Gadget FAQ</h2>
+        <h3 class="display-3">
+            <a class="btn btn-primary" href="mailto:info@gualalagadget.com">
+                If you can think of other questions,send them my way.
+              <span style="vertical-align: middle;" class="glyphicon glyphicon-envelope"></span>
+            </a>        
+        </h3>
+
+        <div class="panel-body">
+        
+          <!-- FAQ Questions here -->
+
+
+    <a href="#How" class="btn btn-info" data-toggle="collapse">
+       <span class="glyphicon glyphicon-collapse-down"></span>
+    How are the models designed?</a>
+        <div id="How" class="collapse">
+          <p>
+   The models are designed in Blender.   They use a variety of different mechanisms to lift the balls, 
+   but all are designed for 8mm, or 5/16th inch metal bearing balls.  Because the tracks are designed 
+   to be the minimum size possible, so as to best highlight the balls as they travel the mazes, it's 
+   important that the balls be clean and perfectly spherical, and also heavy.  It's also important 
+   that the models be almost perfectly level. 
+      </p>
+      <p>
+   In some cases an individual model is designed and prototyped in stages, first testing the lifting 
+   mechanism, then the means of descent.  If everything checks out, the sections are combined, and mounting
+   locations for motor, solar panel, battery and switches are added.  Five or six prototypes are
+   built and run for an extended time to ensure they operate with reasonable reliability.  Usually it's
+   necessary to make adjustments to the tracks, especially those on descent, to reduce the frequency
+   at which balls drop off the model.  Once this is done, the final design is ready to produce.
+ </p>
+        </div>
+ <hr>
+ <a href="#Made" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+ How are the models made?</a>
+ <div id="Made" class="collapse">
+  <p>
+   Each model is 3D printed using PLA plastic on consumer FDM printers.  This takes anywhere from six to 
+   fifteen hours, depending on each model's size and complexity.  A model is made from two to seven 
+   PLA parts, which are inspected and cleaned of any residual plastic that's a byproduct of the printing
+   process.  (None of the models require support material, which simplifies the cleaning process).  Once 
+   the PLA parts are prepared they, along with the electric parts are assembled into complete models.  
+   There's no painting -- the plastic is the color it appears.
+ </p>
+</div>
+<hr>
+ <a href="#More" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+ I want to know more. Can you give me more technical details?</a>
+ <div id="More" class="collapse">
+  <p>
+   Sure.
+   </p>  
+   <p>
+   The lifting mechanisms are all over the map.  In fact, that's the artists' greatest interest.  
+   Generally they carefully leverage gravity, as it's the most forgiving means of managing the 
+   balls' locations.  For example, the lifting gears rely on gravity for the balls to fall into 
+   the gears lifting chambers, and then again rely on gravity to direct the balls out to different
+   paths through the chambers shaped holes.  If, for example, a track simply met a shaped hole 
+   directly without a larger "boarding" chamber, there is a likelyhood that the ball would jam.
+   Having boarding chambers allows for the balls to jostle around and sort out which one will 
+   enter the chamber next.  
+</p>
+<p>
+   The paths back down are also designed in a number of ways, but the most intricate of the mazes
+   use a standard 1cm on a side tile, where the slope of the path is about four degrees from the 
+   horizontal, and the descent between tiles is 0.7mm.  The walls of the tiles are as shallow 
+   as possible so as not to hide the balls.  This tile based approach makes it possible to 
+   quickly create complex mazes (although solving for a dense arrangement is quite challenging),
+   but it still requires adding supporting structures for the 3D printing process.  These 
+   support structures are the most time consuming part of each model's design.  The simplest 
+   description of the challenge is that you can't have any angles between perfectly horizontal 
+   about about 25 degrees from horizontal -- FDM printers simply can't do this without 
+   removable support material.  It would be possible to use support material, but that would 
+   increase the print and clean-up efforts, and would actually detract from the look of the 
+   final model.  In fact, the artists' finds that the challenge of designing to avoid support 
+   material greatly enhances the final gadget's appearance.  In effect, the supporting 
+   structures become part of the model itself.
+</p>
+<p>
+   Before printing a gadget its model must be sliced.  Cura is used for this purpose.
+   The tile based approach of designing each model makes it nearly unavoidable to have 
+   overlapping solids, and some slicers do not handle these instances well, but Cura has proven 
+   quite capable of handling them.  Most parts are printed at 0.2mm layer height and between 
+   190 and 200 degrees Celsius.  Some parts require greater tolerances and are printed at a 
+   finer layer height.  The maze parts need to be printed at the lower end of the temperature 
+   range because they rely on extensive bridging, where the plastic is deposited in mid' air 
+   between supporting structures -- it must harden quickly to minimize how much it sags.
+</p>
+<p>
+   The parts come off the printers needing little or no post processing.  At least that's the 
+   case when they're well tuned.  It takes some time to get everything adjusted to that level, 
+   incuding the ambient temperature in the printing room, and until then it's necessary to 
+   perform some cleaning of plastic.  Usually this cleaning is just removing small strings of
+   PLA that didn't properly retract when the printer head was moving and not extruding.  This 
+   can be a bit challenging on the most complicated models because it's hard to get deep into
+   them.
+</p>
+<p>
+   All the models are very challenging to print. 
+
+   The final assembly of the gadgets involves soldering the electric parts together and 
+   attaching them to their mounts, attaching all the PLA parts together, usually with screws
+   and sometimes glue, then operating them for a while to make sure they are working well.
+   It's not uncommon to find balls getting stuck.  That's typically because there's still a 
+   stray piece of plastic that needs to be cleared.  Another cleaning may be needed.
+</p>
+<p>
+   Finally, after some testing the models are packaged and made ready for shipping!
+ </p>
+</div>
+<hr>
+ <a href="#Care" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+ How do I care for my gadget?</a>
+ <div id="Care" class="collapse">
+<p>
+   The most important thing is to not expose it to excess heat.  PLA plastic can deform at temperatures
+   above 40 degrees Celsius, or about 104 degrees Fahrenheit.  The gadget may look OK, but 
+   deformations of the tracks may prevent the balls from traveling reliably, and there's not much you 
+   can do to fix it.  Be especially careful about leaving it in a car that might get hot.
+</p>
+<p>
+   You'll want to keep the balls and tracks clean.  If it is battery powered, be 
+   sure to remove the batteries when storing the model.  When replacing the batteries be careful not
+   to apply to much pressure as it is possible to break the plastic.  If, however, you do break some 
+   of the plastic you'll probably find that the model still works just fine.  (Many of the most 
+   fragile plastic parts are there just to support the printing process.  Once the gadget is printed, 
+   the only function they serve is to look important).   
+</p>
+<p>
+   The best place for the solar models is in a sunny window, where they can be left indefinitely.  PLA
+   has a durable color, so you shouldn't have to worry about the color fading.  When the sun strikes the 
+   panel the gadget will run, and even when there isn't direct sun you'll still find that the gadget 
+   operates, just very slowly, and in moderate light the gadget will stop.  
+ </div>
+ <hr>
+  <a href="#Type" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+  I can't decide if I should get a battery or a solar model.</a>
+ <div id="Type" class="collapse">
+<p>
+   If you're impatient you'll want a battery powered model.  You'll be able to operate it at 
+   any time.  So, for example, if you want to show your cool new gadget to a friend, you'll be
+   able to do it indoors away from any sunlight.
+</p>
+<p>
+   If you're in an office worker with a window that's got a bit of sun, you should probably get a 
+   solar model.  You can leave it in your window and just let it take care of itself.  There's 
+   no turning it on or off, and you'll not need to worry about batteries.  If you've got an 
+   important phone call or meeting, and it's just too noisy, you can simply turn it away from 
+   the sun and it will quite right down.
+</p>
+</div>
+  <hr>
+  <a href="#Kit" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+  Can I get a kit version?</a>
+
+ <div id="Kit" class="collapse">
+  <p>
+   Not right now.  We're looking into it.  Because the plastic parts are so difficult to print, 
+   any future kit is likely to include those along with the electrical parts.  There are some 
+   questions we need to answer too.  For example, should we expect kit builders to solder parts 
+   together?  Contact us if interested and let us know what you think.
+ </p>
+</div>
+
+ <hr>
+
+  <a href="#Download" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+  Can you make the models available so I can make my own?</a>
+
+
+ <div id="Download" class="collapse">
+  <p>
+   We plan to make a non-motorized one available on the website.  That one doesn't need any parts,
+   and we hope to make it simple enough that most 3D FDM printers will produce a working result.
+   If you've got a 3D printer then you've got everything you need!  Stay tuned.
+ </p>
+</div>
+
+ <hr>
+  <a href="#Gualala" class="btn btn-info" data-toggle="collapse">
+ <span class="glyphicon glyphicon-collapse-down"></span>
+  What does Gualala mean?</a>
+ <div id="Gualala" class="collapse">
+  <p>
+   It's the name of a small coastal village in California.  It's where the gadgets are made.
+ </p>
+</div>
+  
+
+            <!-- FAQ Questions here -->
+
+        </div>
+
+      </div>
+    </div>
+
+  
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+    <!--  custom scripts below -->
+  <script src="assets/js/ggTable.js"></script>
+  <script src="assets/js/ggNav.js"></script>
+  <!--
+    <script>
+    $(document).ready(buildNavBar("#faqNav") 
+        );
+    </script>
+    -->
+    <script>
+    buildNavBar("#homeNav")
+  </script>
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>
