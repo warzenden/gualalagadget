@@ -1,0 +1,95 @@
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<meta name="description" content=""> 
+	<meta name="author" content=""> 
+	<title>Tommy's BirthDay Clock</title> 
+	<style type="text/css">
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+}
+
+
+	</style>
+
+</head> 
+<body> 
+	<center>
+	<input type="button" class="button" onClick="updatePin2()" 
+	value="LED Pin 2"> 
+	<br> 
+	<br> 
+	<input type="button" class="button" onClick="updatePin12()" 
+	value="Pin 12">
+	<br> <br> 
+	<input type="button" class="button" onClick="updatePin13()" 
+	value="Pin 13">
+	<br> <br> 
+	<input type="button" class="button" onClick="updatePin14()" 
+	value="Pin 14">
+	<br> <br> 
+	<output id="switch" 
+	 style="font-family:Courier; color:Gray; font-size: 20px;">	
+	 no reading on pin 16
+	</output> 
+	</center>
+	<br> 
+
+	<script> 
+
+	function updatePin2(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/2", true); 
+	 		xhttp.send(); 
+	 }
+
+	 function updatePin12(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/12", true); 
+	 		xhttp.send(); 
+	 }
+
+	 function updatePin13(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/13", true); 
+	 		xhttp.send(); 
+	 }
+
+	 function updatePin14(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/14", true); 
+	 		xhttp.send(); 
+	 }
+	 //example of using a word 
+	function motor(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/motor", true); 
+	 		xhttp.send(); 
+	 } 
+	 	
+	 //example of using POST
+	function setAlarm(){ var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("POST", "/alarm", true); 
+	 		var timeStamp = alarmHour + ":" + alarmMinute; 
+	 		xhttp.send(timeStamp); 
+	 } 
+
+
+	 //handy
+	 function formatNumber(i) { 
+	 		if (i < 10) {i = "0" + i}; 
+	 		return i; 
+	 	} 
+
+	 </script> 
+</body> 
+</html>

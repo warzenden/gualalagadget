@@ -1,0 +1,146 @@
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<meta name="description" content=""> 
+	<meta name="author" content=""> 
+	<title>Gualala Gadget Access Point</title> 
+
+	<style type="text/css">
+
+.ggButton { 
+
+	margin-top: 10px; 
+	background-color:#ffec64; 
+	border:1px solid #ffaa22;
+	display:inline-block; 
+	font-family:Arial; 
+	font-size:20px; 
+	padding:15px 70px; 
+	opacity: 0.7;
+
+} 
+
+.ggButton:hover {
+    opacity: 1;
+}
+
+.slidecontainer {
+    width: 90%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 45px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+	</style>
+
+</head> 
+<body> 
+	<center>
+	<button class="ggButton" onClick="updatePin2()" 
+	text="">LED Pin 2</button>
+	<br> 
+	<br> 
+	<button class="ggButton" onClick="updatePin12()" 
+	text="">Pin 12</button>
+	<br> <br> 
+<div class="slidecontainer">
+ 
+  
+  <p>Motor Speed:</p>
+  <input type="range" min="0" max="100" value="0" class="slider" id="motorSlider" onchange="updateMotor()">
+</div>
+
+
+	<br> <br> 
+	<button class="ggButton" onClick="updatePin14()" 
+	text="">Pin 14</button>
+	<br> <br> 
+	<output id="switch" 
+	 style="font-family:Courier; color:Gray; font-size: 20px;">	
+	 no reading on pin 16
+	</output> 
+	</center>
+	<br> 
+
+	<script> 
+
+	function updatePin2(){
+
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/2", true); 
+	 		xhttp.send(); 
+	 }
+
+	 function updatePin12(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/12", true); 
+	 		xhttp.send(); 
+	 }
+
+	 function updateMotor(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("POST", "/motor", true);
+	 		var motorSpeed = motorSlider.value;
+	 		xhttp.send(motorSpeed); 
+	
+	 }
+
+	 function updatePin14(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/14", true); 
+	 		xhttp.send(); 
+	 }
+	
+	function motor(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/motor", true); 
+	 		xhttp.send(); 
+	 } 
+	 	
+
+	function setAlarm(){ var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("POST", "/alarm", true); 
+	 		var timeStamp = alarmHour + ":" + alarmMinute; 
+	 		xhttp.send(timeStamp); 
+	 } 
+
+
+
+	 function formatNumber(i) { 
+	 		if (i < 10) {i = "0" + i}; 
+	 		return i; 
+	 	} 
+
+	 </script> 
+</body> 
+</html>

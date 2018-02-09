@@ -1,0 +1,130 @@
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<meta name="description" content=""> 
+	<meta name="author" content=""> 
+	<title>Tommy's BirthDay Clock</title> 
+
+</head> 
+<body onload="updateTime()"> 
+	
+	<a onClick="updateLight()" class="convertButton">Light</a> 
+	<br> 
+	<a onClick="motor()" class="convertButton">Motor</a>
+	<p></p>
+	<div> 
+	  	<a class="rgbButton" onClick="plusHour()">&#9650;</a> 
+	  	<a class="rgbButton" onClick="plusMinute()">&#9650;</a>
+	  	<br>
+	  	<output id="alramTime" style="font-family:Courier; color:Gray; font-size: 40px;">8:00
+	  	</output>
+	  	<br> <a class="rgbButton" onClick="minusHour()">&#9660;</a> 
+	  	<a class="rgbButton" onClick="minusMinute()">&#9660;</a>
+	</div> 
+	<a onClick="setAlarm()" class="convertButton">Set Alarm</a>
+	<br></br> 
+	 Time: 
+	<output id="timer" 
+	 style="font-family:Courier; color:Gray; font-size: 20px;">	
+	</output> 
+	<br> 
+	<output style="font-family:Courier; color:Gray; font-size: 14px;"> Days until Tommy's Birthday: </output>
+	<output id="dutb" style="font-family:Courier; color:Red; font-size: 14px;">0
+	</output>
+	<script> 
+
+	 	var alarmHour = 8; var alarmMinute = 0; 
+
+	 	function setAlarm(){ var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("POST", "/alarm", true); 
+	 		var timeStamp = alarmHour + ":" + alarmMinute; 
+	 		xhttp.send(timeStamp); 
+	 	} 
+
+	 	function motor(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/motor", true); 
+	 		xhttp.send(); 
+	 	} 
+
+	 	function updateLight(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("GET", "/light", true); 
+	 		xhttp.send(); 
+	 	} 
+
+	 	function updateTime(){ 
+	 		var xhttp = new XMLHttpRequest(); 
+	 		xhttp.open("POST", "/timeStamp", true); 
+	 		var today = new Date(); 
+	 		var year = today.getYear(); 
+	 		var month = today.getMonth(); 
+	 		var day = today.getDate(); 
+	 		var h = today.getHours(); 
+	 		var m = today.getMinutes(); 
+	 		var s = today.getSeconds(); 
+	 		var Dm = formatNumber(m); 
+	 		var Ds = formatNumber(s); 
+	 		var timeStamp = year + ":" + month + ":" + day + ":"+ h + ":" + m + ":" + s; 
+	 		xhttp.send(timeStamp); 
+	 		startTime(); } 
+
+	 	function startTime() { 
+	 		var today = new Date(); 
+	 		var year = today.getYear(); 
+	 		var month = today.getMonth(); 
+	 		var h = today.getHours(); 
+	 		var m = today.getMinutes(); 
+	 		var s = today.getSeconds(); 
+	 		var Dm = formatNumber(m); 
+	 		var Ds = formatNumber(s); 
+	 		timer.value = h + ":" + formatNumber(m) + ":" + formatNumber(s); 
+	 		var t = setTimeout(startTime, 500); 
+	 		alramTime.value = formatNumber(alarmHour) + ":" + formatNumber(alarmMinute); 
+
+	 		var start = new Date(today.getFullYear(), 0, 0); 
+	 		var diff = (today - start) + ((start.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000); 
+	 		var oneDay = 1000 * 60 * 60 * 24; 
+	 		var day = Math.floor(diff / oneDay); 
+	 		var delta = 323-day; 
+
+	 		if (delta < 0) { dutb.value = 365 - delta; 
+	 		} else { dutb.value = 323-day; } 
+	 	} 
+
+	 	function minusHour() { 
+	 		alarmHour--; 
+	 		if(alarmHour < 0) alarmHour = 23; 
+	 		alramTime.value = formatNumber(alarmHour) + ":" + 
+	 		formatNumber(alarmMinute); 
+	 	} 
+
+	 	function minusMinute() { 
+	 		alarmMinute--; 
+	 		if(alarmMinute < 0) alarmMinute = 59; 
+	 		alramTime.value = formatNumber(alarmHour) + ":" + 
+	 		formatNumber(alarmMinute); 
+	 	} 
+
+	 	function plusHour() { 
+	 		alarmHour++; 
+	 		if(alarmHour > 23) alarmHour = 0; 
+	 		alramTime.value = formatNumber(alarmHour) + ":" + 
+	 		formatNumber(alarmMinute); 
+	 	} 
+
+	 	function plusMinute() { 
+	 		alarmMinute++; 
+	 		if(alarmMinute > 59) alarmMinute = 0; 
+	 		alramTime.value = formatNumber(alarmHour) + ":" + 
+	 		formatNumber(alarmMinute); } 
+
+	 	function formatNumber(i) { 
+	 		if (i < 10) {i = "0" + i}; 
+	 		return i; 
+	 	} 
+
+	 </script> 
+</body> 
+</html>
